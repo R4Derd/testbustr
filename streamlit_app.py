@@ -6,9 +6,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # Step 1: Load data
-@st.cache
+@st.cache_data
 def load_data():
-    url = "https://data.bus-data.dft.gov.uk/api/v1/gtfsrtdatafeed/?boundingBox"
+    url = "https://data.bus-data.dft.gov.uk/api/v1/gtfsrtdatafeed/?boundingBox"  # Replace with the actual URL
     data = pd.read_csv(url)
     return data
 
